@@ -1,9 +1,13 @@
-import React from 'react'
+import { Search } from "@/components";
+import React from "react";
 
 function page() {
   return (
-    <div>HOLIS :D</div>
-  )
+    <main>
+      <p>Donwload your favorites videos</p>
+      <Search />
+    </main>
+  );
 }
 
-export default page
+export default page;
