@@ -12,8 +12,18 @@
             ├── layout.tsx
             ├── page.tsx
         └── 📁components
+            └── 📁about
+                └── 📁card
+                    ├── Card.tsx
+                └── 📁imageAbout
+                    ├── ImageAbout.tsx
+                ├── About.tsx
+            └── 📁footer
+                ├── Footer.tsx
             └── 📁information
                 ├── Information.tsx
+            └── 📁instructions
+                ├── Instructions.tsx
             └── 📁loading
                 ├── Loading.tsx
             └── 📁navBar
@@ -30,6 +40,10 @@
                 └── 📁tableData
                     ├── TableData.tsx
                 ├── Search.tsx
+            └── 📁text
+                ├── Text.tsx
+            ├── index.ts
+        └── 📁helpers
             ├── index.ts
         └── 📁interfaces
             ├── index.ts
