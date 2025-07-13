@@ -3,6 +3,10 @@
     └── 📁src
         └── 📁__test__
             ├── example.spec.ts
+        └── 📁.github
+            └── 📁workflows
+                ├── deploy.yml
+                ├── test.yml
         └── 📁app
             ├── globals.css
             ├── layout.tsx
@@ -44,5 +48,6 @@
     ├── postcss.config.mjs
     ├── README.md
     ├── tailwind.config.ts
-    └── tsconfig.json
+    ├── tsconfig.json
+    └── work-tree.md
 ```
