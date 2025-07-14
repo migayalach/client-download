@@ -1,9 +1,20 @@
-import React from 'react'
+import React from "react";
+import { Alert } from "antd";
 
-function Information() {
-  return (
-    <div>Information</div>
-  )
+interface InformationInput {
+  description: string;
+  type: "success" | "error" | "info" | "warning";
 }
 
-export default Information
+function Information({ description, type }: InformationInput) {
+  return (
+    <Alert
+      message="Information"
+      description={description}
+      type={type}
+      showIcon
+    />
+  );
+}
+
+export default Information;
