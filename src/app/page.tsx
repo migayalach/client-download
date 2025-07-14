@@ -1,4 +1,4 @@
-import { Search } from "@/components";
+import { About, Footer, Instructions, Search } from "@/components";
 import React from "react";
 
 function page() {
@@ -6,6 +6,12 @@ function page() {
     <main>
       <p>Donwload your favorites videos</p>
       <Search />
+      <hr />
+      <Instructions />
+      <hr />
+      <About />
+      <hr />
+      <Footer />
     </main>
   );
 }
