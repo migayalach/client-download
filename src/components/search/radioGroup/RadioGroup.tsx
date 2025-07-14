@@ -5,12 +5,16 @@ import { Radio } from "antd";
 import type { CheckboxGroupProps } from "antd/es/checkbox";
 import TableData from "../tableData/TableData";
 
+interface RadioInput {
+  url: string;
+}
+
 const optionsWithDisabled: CheckboxGroupProps<string>["options"] = [
   { label: "mp3", value: "mp3", className: "label-1" },
   { label: "mp4", value: "mp4", className: "label-2" },
 ];
 
-function RadioGroup() {
+function RadioGroup({ url }: RadioInput) {
   const [value, setValue] = useState<"mp3" | "mp4">("mp3");
 
   const onChange = ({ target: { value } }: RadioChangeEvent) => {
@@ -26,7 +30,7 @@ function RadioGroup() {
         optionType="button"
         buttonStyle="solid"
       />
-      <TableData format={value} />
+      <TableData format={value} url={url} />
     </div>
   );
 }
