@@ -2,10 +2,16 @@
 import React, { useEffect, useState } from "react";
 import { Input } from "antd";
 import type { GetProps } from "antd";
-import ImageVideo from "../imageVideo/ImageVideo";
+import Picture from "@/components/picture/Picture";
 import RadioGroup from "../radioGroup/RadioGroup";
+import Information from "@/components/information/Information";
 
 type SearchProps = GetProps<typeof Input.Search>;
+interface infoState {
+  value: string;
+  action: boolean;
+  state: "success" | "error" | "info" | "warning";
+}
 
 const { Search } = Input;
 
@@ -13,6 +19,12 @@ function Find() {
   const [inputValue, setInputValue] = useState<string>("");
   const [urlVideo, setUrlVideo] = useState<string>("");
   const [imageVideo, setImageVideo] = useState<string>("");
+  // select
+  const [info, setInfo] = useState<infoState>({
+    value: "",
+    state: "info",
+    action: false,
+  });
 
   const extractVideoId = (url: string): string | null => {
     try {
@@ -24,7 +36,11 @@ function Find() {
         return parsedUrl.searchParams.get("v");
       }
     } catch (error) {
-      console.log(error);
+      setInfo({
+        value: String(error),
+        action: true,
+        state: "error",
+      });
       return null;
     }
     return null;
@@ -48,19 +64,36 @@ function Find() {
     }
   }, [urlVideo]);
 
+  useEffect(() => {
+    if (info.action) {
+      setTimeout(() => {
+        setInfo({
+          value: "",
+          state: "info",
+          action: false,
+        });
+        setInputValue("");
+        setUrlVideo("");
+      }, 3000);
+    }
+  }, [info]);
+
   return (
     <>
       <Search
         size="large"
         placeholder="Please introduce your link"
         value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={(event) => setInputValue(event.target.value)}
         onSearch={onSearch}
         enterButton
         allowClear
       />
-      {imageVideo && <ImageVideo imgVideo={imageVideo} />}
-      {imageVideo && <RadioGroup />}
+      {imageVideo && <Picture imgVideo={imageVideo} />}
+      {imageVideo && <RadioGroup url={urlVideo} />}
+      {info.action && (
+        <Information description={info.value} type={info.state} />
+      )}
     </>
   );
 }
