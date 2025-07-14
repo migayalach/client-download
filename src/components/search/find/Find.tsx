@@ -5,13 +5,9 @@ import type { GetProps } from "antd";
 import Picture from "@/components/picture/Picture";
 import RadioGroup from "../radioGroup/RadioGroup";
 import Information from "@/components/information/Information";
+import { infoState } from "@/interfaces";
 
 type SearchProps = GetProps<typeof Input.Search>;
-interface infoState {
-  value: string;
-  action: boolean;
-  state: "success" | "error" | "info" | "warning";
-}
 
 const { Search } = Input;
 

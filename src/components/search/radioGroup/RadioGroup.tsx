@@ -4,10 +4,7 @@ import type { RadioChangeEvent } from "antd";
 import { Radio } from "antd";
 import type { CheckboxGroupProps } from "antd/es/checkbox";
 import TableData from "../tableData/TableData";
-
-interface RadioInput {
-  url: string;
-}
+import { RadioInput } from "@/interfaces";
 
 const optionsWithDisabled: CheckboxGroupProps<string>["options"] = [
   { label: "mp3", value: "mp3", className: "label-1" },

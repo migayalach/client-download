@@ -3,16 +3,7 @@ import { Table } from "antd";
 import type { TableColumnsType } from "antd";
 import { Qualitymp3, Qualitymp4 } from "@/mocks/options";
 import ButtonDownload from "../buttonDownload/ButtonDownload";
-
-interface DataFormat {
-  quality: string;
-  format: string;
-}
-
-interface InputData {
-  format: "mp3" | "mp4";
-  url: string;
-}
+import { DataFormat, InputData } from "@/interfaces";
 
 function TableData({ format, url }: InputData) {
   const renderFormat = (data: string) => {

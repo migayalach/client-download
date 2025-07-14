@@ -3,12 +3,7 @@ import React, { useEffect, useState } from "react";
 import { DownloadOutlined } from "@ant-design/icons";
 import { Button, Modal } from "antd";
 import ProgressAction from "@/components/progressAction/ProgressAction";
-
-interface InputDataDownload {
-  url: string;
-  quality: string;
-  format: string;
-}
+import { InputDataDownload } from "@/interfaces";
 
 function ButtonDownload({ url, quality, format }: InputDataDownload) {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
