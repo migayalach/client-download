@@ -1,9 +1,12 @@
-import React from 'react'
+import { TextInput } from "@/interfaces";
+import React from "react";
 
-function Text() {
+function Text({ number, text }: TextInput) {
   return (
-    <div>Text</div>
-  )
+    <p>
+      <span>{number}</span> {text}
+    </p>
+  );
 }
 
-export default Text
+export default Text;
