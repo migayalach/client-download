@@ -11,47 +11,49 @@ interface DataFormat {
 
 interface InputData {
   format: "mp3" | "mp4";
+  url: string;
 }
 
-const columns: TableColumnsType<DataFormat> = [
-  {
-    title: "Quality",
-    dataIndex: "quality",
-    key: "quality",
-    width: 120,
-  },
-  {
-    title: "Format",
-    dataIndex: "format",
-    key: "format",
-    width: 100,
-  },
-  {
-    title: "Action",
-    dataIndex: "address",
-    key: "address",
-    width: 200,
-    render: () => <ButtonDownload />,
-  },
-];
+function TableData({ format, url }: InputData) {
+  const renderFormat = (data: string) => {
+    if (data === "mp3") {
+      return Qualitymp3.map(({ quality, format }, index) => ({
+        key: index.toString(),
+        quality,
+        format,
+      }));
+    } else {
+      return Qualitymp4.map(({ quality, format }, index) => ({
+        key: index.toString(),
+        quality,
+        format,
+      }));
+    }
+  };
 
-const renderFormat = (data: string) => {
-  if (data === "mp3") {
-    return Qualitymp3.map(({ quality, format }, index) => ({
-      key: index.toString(),
-      quality,
-      format,
-    }));
-  } else {
-    return Qualitymp4.map(({ quality, format }, index) => ({
-      key: index.toString(),
-      quality,
-      format,
-    }));
-  }
-};
+  const columns: TableColumnsType<DataFormat> = [
+    {
+      title: "Quality",
+      dataIndex: "quality",
+      key: "quality",
+      width: 120,
+    },
+    {
+      title: "Format",
+      dataIndex: "format",
+      key: "format",
+      width: 100,
+    },
+    {
+      title: "Action",
+      key: "action",
+      width: 200,
+      render: ({ format, quality }) => (
+        <ButtonDownload url={url} format={format} quality={quality} />
+      ),
+    },
+  ];
 
-function TableData({ format }: InputData) {
   return (
     <div>
       <Table<DataFormat>
