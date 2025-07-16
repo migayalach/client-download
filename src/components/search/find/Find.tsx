@@ -75,8 +75,9 @@ function Find() {
   }, [info]);
 
   return (
-    <>
+    <div className="flex flex-col justify-center items-center ">
       <Search
+        className="md:max-w-[1200px]"
         size="large"
         placeholder="Please introduce your link"
         value={inputValue}
@@ -85,12 +86,14 @@ function Find() {
         enterButton
         allowClear
       />
-      {imageVideo && <Picture imgVideo={imageVideo} />}
-      {imageVideo && <RadioGroup url={urlVideo} />}
+      <div className="md:flex">
+        {imageVideo && <Picture imgVideo={imageVideo} />}
+        {imageVideo && <RadioGroup url={urlVideo} />}
+      </div>
       {info.action && (
         <Information description={info.value} type={info.state} />
       )}
-    </>
+    </div>
   );
 }
 
