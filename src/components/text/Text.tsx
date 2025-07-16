@@ -3,8 +3,8 @@ import React from "react";
 
 function Text({ number, text }: TextInput) {
   return (
-    <p>
-      <span>{number}</span> {text}
+    <p className="p-1 mt-1 text-[16px] md:text-[19px]">
+      <span className="font-medium">{number} :</span> {text}
     </p>
   );
 }
