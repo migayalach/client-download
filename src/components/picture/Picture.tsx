@@ -3,7 +3,14 @@ import { Image } from "antd";
 import { InputPicture } from "@/interfaces";
 
 function Picture({ imgVideo }: InputPicture) {
-  return <Image preview={false} width={200} src={imgVideo} alt="video-image" />;
+  return (
+    <Image
+      preview={false}
+      src={imgVideo}
+      alt="video-image"
+      className="mt-4 mb-4 rounded-[15px] inset-shadow-sm"
+    />
+  );
 }
 
 export default Picture;
