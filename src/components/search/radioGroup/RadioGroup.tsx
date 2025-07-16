@@ -19,7 +19,7 @@ function RadioGroup({ url }: RadioInput) {
   };
 
   return (
-    <div>
+    <div className="md:ml-20 md:mt-4">
       <Radio.Group
         options={optionsWithDisabled}
         onChange={onChange}
