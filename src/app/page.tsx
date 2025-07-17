@@ -1,7 +1,7 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import { Layout, theme } from "antd";
-import { About, Instructions, Search } from "@/components";
+import { About, Instructions, NavBar, Search } from "@/components";
 
 const { Header, Content, Footer } = Layout;
 
@@ -18,31 +18,11 @@ function page() {
           zIndex: 1000,
           width: "100%",
           height: 64,
-          padding: "0 24px",
+          padding: "0",
           backgroundColor: "#1b1b32",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
         }}
       >
-        <div style={{ color: "#fff", fontWeight: "bold", fontSize: 18 }}>
-          MyLogo
-        </div>
-
-        <div style={{ display: "flex", gap: "32px" }}>
-          <a href="#find" style={{ color: "#fff", textDecoration: "none" }}>
-            Find
-          </a>
-          <a
-            href="#instructions"
-            style={{ color: "#fff", textDecoration: "none" }}
-          >
-            Instructions
-          </a>
-          <a href="#about" style={{ color: "#fff", textDecoration: "none" }}>
-            About
-          </a>
-        </div>
+        <NavBar />
       </Header>
       <Content style={{ paddingTop: 64 }}>
         <div
