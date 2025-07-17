@@ -17,7 +17,12 @@ function NavBar() {
   return (
     <div className="flex flex-row justify-between items-center text-white">
       <div className="text-[16px] ml-8 md:text-[22px]">
-        <a href="#" className="hover:text-white">
+        <a
+          href="#"
+          id="#find"
+          onClick={handleSelect}
+          className="hover:text-white"
+        >
           CodeReview
         </a>
       </div>
