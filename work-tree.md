@@ -1,8 +1,12 @@
 ```
 └── 📁client-download
     └── 📁src
-        └── 📁__test__
-            ├── example.spec.ts
+        └── 📁__tests__
+            ├── about.spec.tsx
+            ├── instructions.spec.tsx
+            ├── navBar.spec.tsx
+            ├── picture.spec.tsx
+            ├── text.spec.tsx
         └── 📁.github
             └── 📁workflows
                 ├── deploy.yml
@@ -13,28 +17,22 @@
             ├── page.tsx
         └── 📁components
             └── 📁about
-                └── 📁card
-                    ├── Card.tsx
-                └── 📁imageAbout
-                    ├── ImageAbout.tsx
                 ├── About.tsx
-            └── 📁footer
-                ├── Footer.tsx
             └── 📁information
                 ├── Information.tsx
             └── 📁instructions
                 ├── Instructions.tsx
-            └── 📁loading
-                ├── Loading.tsx
             └── 📁navBar
                 ├── NavBar.tsx
+            └── 📁picture
+                ├── Picture.tsx
+            └── 📁progressAction
+                ├── ProgressAction.tsx
             └── 📁search
                 └── 📁buttonDownload
                     ├── ButtonDownload.tsx
                 └── 📁find
                     ├── Find.tsx
-                └── 📁imageVideo
-                    ├── ImageVideo.tsx
                 └── 📁radioGroup
                     ├── RadioGroup.tsx
                 └── 📁tableData
@@ -43,18 +41,26 @@
             └── 📁text
                 ├── Text.tsx
             ├── index.ts
-        └── 📁helpers
-            ├── index.ts
+        └── 📁images
+            ├── cloud-arrow-down-fill.svg
+            ├── film.svg
+            ├── gift-fill.svg
         └── 📁interfaces
             ├── index.ts
         └── 📁mocks
+            ├── about.ts
+            ├── instruction.ts
             ├── options.ts
+        └── 📁types
+            ├── index.ts
     ├── .eslintrc.json
     ├── .gitignore
     ├── docker-compose.dev.yml
     ├── docker-compose.yml
     ├── Dockerfile
     ├── Dockerfile.dev
+    ├── jest.config.js
+    ├── jest.setup.ts
     ├── next-env.d.ts
     ├── next.config.js
     ├── package-lock.json
