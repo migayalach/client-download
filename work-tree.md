@@ -2,11 +2,20 @@
 └── 📁client-download
     └── 📁src
         └── 📁__tests__
-            ├── about.spec.tsx
-            ├── instructions.spec.tsx
-            ├── navBar.spec.tsx
-            ├── picture.spec.tsx
-            ├── text.spec.tsx
+            └── 📁e2e
+            └── 📁integration
+                ├── buttonDownload.spec.tsx
+                ├── find.spec.tsx
+                ├── home.spec.tsx
+                ├── radioGroup.spec.tsx
+                ├── search.spec.tsx
+                ├── tableData.spec.tsx
+            └── 📁unit
+                ├── about.spec.tsx
+                ├── instructions.spec.tsx
+                ├── navBar.spec.tsx
+                ├── picture.spec.tsx
+                ├── text.spec.tsx
         └── 📁.github
             └── 📁workflows
                 ├── deploy.yml
