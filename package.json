@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "test": "jest",
+    "e2e": "cypress open",
     "build": "next build --no-lint",
     "start": "next start",
     "lint": "next lint"
@@ -24,6 +25,7 @@
     "@types/react": "^18.2.24",
     "@types/react-dom": "^18.3.7",
     "babel-jest": "^30.0.4",
+    "cypress": "^14.5.3",
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "jest": "^30.0.4",
