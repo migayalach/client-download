@@ -21,6 +21,7 @@ function RadioGroup({ url }: RadioInput) {
   return (
     <div className="md:ml-20 md:mt-4">
       <Radio.Group
+        data-testid="radio-group"
         options={optionsWithDisabled}
         onChange={onChange}
         value={value}

@@ -48,6 +48,7 @@ function TableData({ format, url }: InputData) {
   return (
     <div>
       <Table<DataFormat>
+        table-testId="table-data"
         columns={columns}
         dataSource={renderFormat(format)}
         pagination={false}

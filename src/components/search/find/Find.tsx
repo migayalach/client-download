@@ -15,7 +15,6 @@ function Find() {
   const [inputValue, setInputValue] = useState<string>("");
   const [urlVideo, setUrlVideo] = useState<string>("");
   const [imageVideo, setImageVideo] = useState<string>("");
-  // select
   const [info, setInfo] = useState<infoState>({
     value: "",
     state: "info",
@@ -75,8 +74,12 @@ function Find() {
   }, [info]);
 
   return (
-    <div className="flex flex-col justify-center items-center ">
+    <div
+      className="flex flex-col justify-center items-center"
+      data-testid="find-container-data"
+    >
       <Search
+        data-testid="search-data"
         className="md:max-w-[1200px]"
         size="large"
         placeholder="Please introduce your link"
@@ -86,7 +89,7 @@ function Find() {
         enterButton
         allowClear
       />
-      <div className="md:flex">
+      <div className="md:flex" data-testid="container-div-data">
         {imageVideo && <Picture imgVideo={imageVideo} />}
         {imageVideo && <RadioGroup url={urlVideo} />}
       </div>
