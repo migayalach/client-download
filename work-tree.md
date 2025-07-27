@@ -1,18 +1,30 @@
 ```
 └── 📁client-download
+    └── 📁cypress
+        └── 📁downloads
+        └── 📁e2e
+            ├── app.cy.ts
+        └── 📁fixtures
+            ├── example.json
+        └── 📁support
+            ├── commands.ts
+            ├── e2e.ts
+    └── 📁public
+        ├── file.svg
+        ├── globe.svg
+        ├── next.svg
+        ├── vercel.svg
+        ├── window.svg
     └── 📁src
         └── 📁__tests__
-            └── 📁e2e
             └── 📁integration
                 ├── buttonDownload.spec.tsx
                 ├── find.spec.tsx
-                ├── home.spec.tsx
+                ├── instructions.spec.tsx
                 ├── radioGroup.spec.tsx
-                ├── search.spec.tsx
                 ├── tableData.spec.tsx
             └── 📁unit
                 ├── about.spec.tsx
-                ├── instructions.spec.tsx
                 ├── navBar.spec.tsx
                 ├── picture.spec.tsx
                 ├── text.spec.tsx
@@ -64,10 +76,9 @@
             ├── index.ts
     ├── .eslintrc.json
     ├── .gitignore
-    ├── docker-compose.dev.yml
+    ├── cypress.config.ts
     ├── docker-compose.yml
     ├── Dockerfile
-    ├── Dockerfile.dev
     ├── jest.config.js
     ├── jest.setup.ts
     ├── next-env.d.ts
